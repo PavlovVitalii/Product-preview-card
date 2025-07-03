@@ -30,7 +30,6 @@ body {
 }
 
 .product-details {
-  width: 300px;
   padding: 32px;
   background: #ffffff;
   display: flex;
@@ -53,6 +52,7 @@ h2 {
   font-size: 32px;
   color: #1c232b;
   margin: 24px 0;
+  line-height: 100%;
 }
 
 p {
@@ -64,6 +64,7 @@ p {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin: 32px 0;
 }
 
 span {
@@ -95,8 +96,43 @@ button {
   border-radius: 8px;
   border: none;
   color: #ffffff;
+  width: 236px;
+  height: 50px;
 }
 
-button:hover {
-  background: #1a4032;
+@media (hover: hover) {
+  button:hover {
+    background: #1a4032;
+  }
+}
+
+@media (hover: none) {
+  button:active {
+    background: #1a4032;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: column;
+    width: 350px;
+    height: 750px;
+  }
+
+  .product-image-container {
+    height: 342px;
+  }
+
+  .product-image {
+    width: 100%;
+    src: "images/image-product-mobile.jpg";
+  }
+
+  .price {
+    margin: 24px 0;
+  }
+
+  button {
+    width: 100%;
+  }
 }
